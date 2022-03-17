@@ -1,0 +1,215 @@
+/********************************
+GALLERY
+********************************/
+#p-gallery {
+    overflow: hidden;
+    width: $max;
+    height: auto;
+    padding: 40px 0 10px 0;
+
+    @include s768 {
+        padding: 60px 0 15px 0;
+    }
+
+    @include s1140 {
+        padding: 60px 0 20px 0;
+    }
+
+    @include s1600 {
+        padding: 70px 0 30px 0;
+    }
+
+    .g-paragraph-1 {
+        width: 100%;
+
+        @include s991 {
+            width: 87.5%;
+        }
+    }
+
+}
+
+/********************************
+GALLERY PREVIEW
+********************************/
+#s-gallery-preview {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    width: $max;
+    height: auto;
+
+    @include s400 {
+        //padding-top: $m3 * 1.3;
+    }
+
+    @include s600 {
+        //padding-top: $m;
+    }
+}
+
+.s-preview-item {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 3% $m5 0;
+    cursor: pointer;
+
+    @include s1140 {
+        width: 31.3%;
+        //margin: 0 3% $m5 0;
+    }
+
+    &:nth-of-type(3n) {
+
+        @include s1140 {
+            margin: 0 0 $m5 0;
+        }
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.25);
+        }
+
+        .s-preview-icon {
+            opacity: 1;
+        }
+    }
+
+    img {
+        width: $max;
+        height: auto;
+        opacity: 1;
+        transition: 1.15s ease;
+        transform: scale(1);
+        backface-visibility: hidden;
+    }
+
+    .s-preview-icon {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 4.85rem;
+        opacity: 0;
+        transform: translate(-50%, -65%);
+        -ms-transform: translate(-50%, -48.5%);
+    }
+}
+
+/** GALLERY MODAL
+********************************/
+#s-gallery-modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: $max;
+    height: $max;
+    background-color: rgba(16, 24, 32, 0.875);
+    z-index: 99;
+}
+
+.s-close-btn {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: $blGrey;
+    text-align: right;
+
+    @include s991 {
+        right: $m2 * 0.95;
+    }
+
+    i {
+        font-size: 2.25rem;
+        cursor: pointer;
+
+        @include s991 {
+            font-size: 2.25rem;
+        }
+
+        @include s1140 {
+            font-size: 2.25rem;
+        }
+    }
+}
+
+#s-modal-content,
+#s-modal-navigation {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $max;
+    height: $max;
+}
+
+#s-modal-content {
+    justify-content: center;
+    background-color: transparent;
+    z-index: 9;
+}
+
+#s-modal-navigation {
+    background-color: transparent;
+    z-index: 18;
+}
+
+.s-slide {
+    display: none;
+    width: 62.5%;
+    height: auto;
+
+    &.active {
+        display: block;
+    }
+
+    img {
+        width: $max;
+        height: auto;
+        margin: 0 auto;
+        transition: all .5s ease-in-out;
+    }
+}
+
+#s-slr-arrows {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: $max;
+    height: auto;
+    background-color: transparent;
+}
+
+.s-arrow {
+    width: 72px;
+    min-height: 56px;
+    text-align: center;
+
+    i {
+        line-height: 56px;
+        color: $blGrey;
+        font-size: 3.25rem;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+
+        @include s600 {
+            font-size: 4.15rem;
+        }
+
+        @include s991 {
+            font-size: 3.65rem;
+        }
+    }
+}

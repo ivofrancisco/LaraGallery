@@ -1,0 +1,57 @@
+/********************************
+CUSTOM TOAST
+********************************/
+.s-custom-toast {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top: 20%;
+    //left: 0;
+    right: 50px;
+    min-width: 320px;
+    max-width: 390px;
+    padding: 10px 22px 7px 13px;
+    background-color: $white;
+    color: $dark;
+    text-align: left;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 5px;
+    border: 1px solid $drkWhite;
+    z-index: 9999;
+
+    i {
+        margin-right: $m1 * 1.5;
+        color: $success;
+        font-size: 2.5rem;
+    }
+
+    h6 {
+        font-family: $fontA;
+        font-size: 1.425rem;
+    }
+
+    &.visible {
+        animation:alert-success 3s 1;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s;
+        -webkit-animation:alert-success 3s 1;
+        -webkit-animation-delay: 1.5s; /* Safari and Chrome */
+        -webkit-animation-fill-mode: forwards;
+    }
+}
+
+@keyframes alert-success {
+    0%   {opacity: 1;}
+    70%  {opacity: 1;}
+    90% {opacity: 1; -webkit-transform: translateY(0px);}
+    100% {opacity: 0; -webkit-transform: translateY(-30px);}
+}
+
+@-webkit-keyframes alert-success {
+    0%   {opacity: 1;}
+    70%  {opacity: 1;}
+    90% {opacity: 1; -webkit-transform: translateY(0px);}
+    100% {opacity: 0; -webkit-transform: translateY(-30px);}
+}

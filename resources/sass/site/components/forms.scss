@@ -1,0 +1,258 @@
+/********************************
+GENERAL
+********************************/
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='date'],
+input[type='range'],
+textarea {
+    outline: none;
+    &:-webkit-autofill {
+        transition: background-color 50000s ease-in-out 0s,
+        color 5000s ease-in-out 0s;
+    }
+}
+
+/********************************
+FORM GROUP
+********************************/
+.form-group {
+
+}
+
+/********************************
+FORM CONTROL
+********************************/
+.form-control {
+    box-sizing: border-box;
+    position: relative;
+    width: $max;
+    margin: 1px 0;
+    height: 33px;
+    line-height: 42px;
+    padding: 0 0.60rem;
+    font-family: $fontA;
+    outline: none;
+    border-radius: 3px 3px 3px 3px;
+    -webkit-appearance: none;
+
+    &::placeholder {
+        color: $midGrey;
+        font-family: $fontA;
+        //font-weight: 300;
+        letter-spacing: $ls * 1.5;
+    }
+
+    &:focus {
+        color: $midGrey;
+        font-family: $fontA;
+        letter-spacing: $ls2;
+        &.brd {
+            border: 1px solid $blue;
+            -webkit-box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.4);
+            -moz-box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 6px -2px rgba(0, 0, 0, 0.45);
+        }
+    }
+
+    &.brd {
+        background-color: $white;
+        color: rgba(35, 44, 56, 0.75);
+    }
+
+    &.sm {
+        height: 33px;
+        font-size: 1.525rem;
+        line-height: 1.3;
+        &::placeholder {
+            font-size: 1.525rem;
+        }
+    }
+
+    &.md {
+        height: 40px;
+        font-size: 1.65rem;
+        &::placeholder {
+            font-size: 1.65rem;
+        }
+    }
+
+    &.lg {
+        height: 47px;
+        font-size: 1.925rem;
+        &::placeholder {
+            font-size: 1.925rem;
+        }
+    }
+}
+
+.form-control.textarea {
+    height: 110px;
+    padding: $m1 * 1.65 $m1 * 1.5;
+    line-height: 26px;
+}
+
+#s-contact-form,
+#s-quotation-form {
+
+    input[type='text'],
+    input[type='email'],
+    input[type='password'],
+    input[type='date'],
+    input[type='range'],
+    textarea {
+        outline: none;
+        &:-webkit-autofill {
+            transition: background-color 50000s ease-in-out 0s,
+            color 5000s ease-in-out 0s;
+        }
+    }
+
+    label {
+        color: #505050;
+        font-family: $fontB;
+        font-size: 1.25rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    .form-control {
+        height: 36px;
+        font-family: $fontB;
+        font-size: 1.5rem;
+        font-weight: 300;
+        letter-spacing: $ls1;
+        border: 0;
+        border-bottom: 1px solid #101820;
+        border-radius: 0;
+        -webkit-appearance: none;
+
+        &:focus{
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    .form-control.textarea {
+        height: 134px;
+        padding: $m1 * 1.65 $m1 * 1.5;
+        line-height: 26px;
+        border: 1px solid #101820;
+    }
+
+    .bbl {
+        float: right;
+        padding: 0.85rem 2.1rem 0.75rem 2.1rem;
+        font-family: $fontB;
+        font-size: 1.575rem;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: $ls1 * 1.3;
+        background-color: $gold;
+        color: #101820;
+        border-color: $gold;
+        border-radius: 0;
+        &:hover {
+            background-color: $drkGold;
+            color: $white;
+            border-color: $drkGold;
+        }
+    }
+
+    .required {
+        margin-left: 2px;
+        color: $gold;
+        font-weight: 700;
+        font-size: 1.525rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .not-required {
+        display: none;
+        color: $gold;
+    }
+}
+
+#s-quotation-form {
+
+    h5 {
+        margin-bottom: $m1 * 1.65;
+        color: #101820;
+        font-size: 1.75rem;
+        font-weight: 400;
+        letter-spacing: $ls2;
+    }
+
+    .form-row.service-options {
+        margin: $m1 * 1.75 0 $m 0;
+    }
+
+    /** CUSTOM CHECKBOXES
+    ********************************/
+    .checkbox-group {
+        height: auto;
+        margin-bottom: $m1;
+
+        label {
+            padding-top: $m2;
+            font-family: $fontB;
+            font-size: 1.25rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        &.inl {
+            float: left;
+            width: $max * 0.3;
+        }
+    }
+
+    .checkbox-item {
+        position: absolute;
+        opacity: 0;
+
+        & + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        & + label:before {
+            content: '';
+            display: inline-block;
+            vertical-align: text-bottom;
+            width: 17px;
+            height: 17px;
+            margin-right: 8px;
+            margin-bottom: $m * 0.25;
+            border-radius: 0;
+        }
+
+        &.sm + label:before {
+            border-radius: 3px;
+        }
+
+        &.brd + label:before {
+            background-color: $white;
+            border: 1px solid #505050;
+        }
+
+        &:checked + label:before {
+            background: #505050;
+        }
+
+        &:checked + label:after {
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: 7px;
+            width: 2px;
+            height: 3px;
+            box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white,
+            4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+            transform: rotate(45deg);
+        }
+    }
+
+}
