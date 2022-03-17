@@ -25,7 +25,7 @@ class StoreGalleryRequest extends FormRequest
     {
         return [
             'title' => 'required',
-            'body' => 'required',
+            'body'  => 'required',
         ];
     }
 }

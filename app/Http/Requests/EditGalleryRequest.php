@@ -25,6 +25,7 @@ class EditGalleryRequest extends FormRequest
     {
         return [
             'title' => 'required',
+            'body'  => 'required'
         ];
     }
 }

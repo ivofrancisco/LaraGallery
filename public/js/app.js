@@ -19351,12 +19351,9 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 /*!*****************************************!*\
   !*** ./resources/sass/admin/admin.scss ***!
   \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Can't find stylesheet to import.\n  ╷\n8 │ @import \"/buttons\";\n  │         ^^^^^^^^^^\n  ╵\n  resources/sass/admin/admin.scss 8:9  root stylesheet\n    at processResult (/Applications/MAMP/htdocs/lara/vav-gallery/node_modules/webpack/lib/NormalModule.js:753:19)\n    at /Applications/MAMP/htdocs/lara/vav-gallery/node_modules/webpack/lib/NormalModule.js:855:5\n    at /Applications/MAMP/htdocs/lara/vav-gallery/node_modules/loader-runner/lib/LoaderRunner.js:399:11\n    at /Applications/MAMP/htdocs/lara/vav-gallery/node_modules/loader-runner/lib/LoaderRunner.js:251:18\n    at context.callback (/Applications/MAMP/htdocs/lara/vav-gallery/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at /Applications/MAMP/htdocs/lara/vav-gallery/node_modules/sass-loader/dist/index.js:54:7\n    at Function.call$2 (/Applications/MAMP/htdocs/lara/vav-gallery/node_modules/sass/sass.dart.js:99012:16)\n    at render_closure1.call$2 (/Applications/MAMP/htdocs/lara/vav-gallery/node_modules/sass/sass.dart.js:84527:12)\n    at _RootZone.runBinary$3$3 (/Applications/MAMP/htdocs/lara/vav-gallery/node_modules/sass/sass.dart.js:29558:18)\n    at _FutureListener.handleError$1 (/Applications/MAMP/htdocs/lara/vav-gallery/node_modules/sass/sass.dart.js:28080:21)");
 
 /***/ }),
 
@@ -19689,8 +19686,7 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
-/******/ 			"css/main": 0,
-/******/ 			"css/admin": 0
+/******/ 			"css/main": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -19740,9 +19736,9 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/admin"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/main","css/admin"], () => (__webpack_require__("./resources/sass/admin/admin.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main","css/admin"], () => (__webpack_require__("./resources/sass/site/main.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/main"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/main"], () => (__webpack_require__("./resources/sass/admin/admin.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/main"], () => (__webpack_require__("./resources/sass/site/main.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -5,7 +5,7 @@
 @import "mixins/patterns";
 
 // Components
-@import "components/buttons";
+@import "/buttons";
 @import "components/navbar";
 @import "components/header";
 @import "components/tables";
@@ -13,8 +13,8 @@
 @import "components/file-uploaders";
 @import "components/confirm";
 
-// Pages
-// @import '../commons/errors';
+@import '../commons/index';
+@import '../commons/buttons';
 
 // Globals
 @import "globals";
